@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>智能化停车系统-注册</title>
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/register.css">
+    <script src="../static/js/jquery-1.11.3.js"></script>
+    <script>
+        function checkname() {
+            var ret = false;//假设用户名称不存在
+            $.ajax({
+                url:"/checkuname",
+                type:"get",
+                data:"uname="+$("#uname").val(),
+                async:false,
+                dataType:'json',
+                success:function (data) {
+                    //data 响应回来的数据
+                    if(data.status==1){
+                        ret = true;//将用户名设者为已存在的状态
+                    }
+                    $("#uname-tip").html(data.text);
+                }
+            });
+            return ret;
+        }
+        $(function () {
+           $("#uname").blur(function () {
+              checkname();
+           });
+           $("#btnReg").click(function () {
+               if(!checkname()){
+                   $.ajax({
+                       url:"/reguser",
+                       type:"post",
+                       data:{
+                           uname:$("#uname").val(),
+                           pwd1:$("#pwd1").val(),
+                           pwd2:$("#pwd2").val(),
+                           email:$("#email").val(),
+                           phone:$("#phone").val(),
+                           ucard:$("#ucard").val()
+                       },
+                       dataType:'json',
+                       success:function (data) {
+                           alert(data.text);
+                           if(data.status==1){
+                               $('#uname').val('');
+                               $('#pwd1').val('');
+                               $('#pwd2').val('');
+                               $('#email').val('');
+                               $('#phone').val('');
+                               $('#ucard').val('');
+                               $('#uname-tip').html('');
+
+                           }
+                       }
+
+
+                   });
+               }
+           });
+        });
+
+    </script>
+</head>
+<body>
+<div id="box2">
+    <div id="main">
+        <div></div>
+        <form action="/test" method="post" enctype="multipart/form-data">
+            <div class="form-one">
+                <div>
+                    <p class="new-regis">智能化停车系统</p>
+                    <a href="" class="login">新用户注册</a>
+                </div>
+            </div>
+            <div class="form-line">
+                <p>用户名:</p>
+                <input type="text" id="uname" placeholder="请输入用户名" class="uinput">
+                <span id="uname-tip"></span>
+            </div>
+            <div class="form-line">
+                <p>密码:</p>
+                <input type="password" id="pwd1" placeholder="请输入密码" class="uinput">
+            </div>
+            <div class="form-line">
+                <p>确认密码:</p>
+                <input type="password" id="pwd2" placeholder="请输入确认密码" class="uinput">
+            </div>
+            <div class="form-line">
+                <p>邮箱:</p>
+                <input type="email" id="email" placeholder="请输入邮箱号" class="uinput">
+            </div>
+            <div class="form-line">
+                <p>手机号:</p>
+                <input type="text" id="phone" placeholder="请输入手机号" class="uinput">
+            </div>
+            <div class="form-line">
+                <p>车牌信息:</p>
+                <input type="text" id="ucard" placeholder="请输入车牌信息" class="uinput">
+            </div>
+            <div class="form-line">
+                <p></p>
+                <input type="submit" id="btnReg" value="提交注册信息" class="btn">
+            </div>
+            <div class="form-last">
+                <div>
+                    <p class="new-regis">已经有了一个账户?</p>
+                    <a href="/login" class="login">立即登录</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

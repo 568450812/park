@@ -1,0 +1,46 @@
+/*1.顶部*/
+#top{
+    height: 50px;
+}
+/*左右浮动*/
+#system{
+    float: left;
+    width:200px;
+    font-size: 28px;
+    color: darkseagreen;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+#top ul{
+    float: right;
+    margin: 20px 0;
+}
+#top ul li{
+    float: left;
+    font-size: 25px;
+    color: white;
+    margin-right: 40px;
+}
+#main{
+    height: 650px;
+    position: relative;
+
+}
+#main ul{
+    position: absolute;
+    width: 500px;
+    font-size: 70px;
+    font-style: italic;
+    font-family: Monospaced;
+    font-weight: bold;
+    color: wheat;
+    left: 50%;
+    margin-left: -100px;
+    bottom: 100px;
+}
+#main #li1{
+    margin-top: 20px;
+    float: left;
+    font-size: 25px;
+    color: deepskyblue;
+}

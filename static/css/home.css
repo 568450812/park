@@ -1,0 +1,74 @@
+#nav{
+    position: relative;
+}
+#nav .form-one{
+    width: 480px;
+    height: 100px;
+    position: absolute;
+    left:50%;
+    margin-left: -240px;
+    top: 300px;
+
+}
+#nav .form-one div{
+    width:80px;
+    height:120px;
+    float: left;
+    margin-right: 120px;
+}
+#nav .form-one div:last-child{
+    margin-right:0;
+}
+.form-one p{
+    margin-bottom: 10px;
+}
+#nav div a{
+    color: black;
+    margin-left: 20px;
+    background: sandybrown;
+    font-size: 18px;
+    text-align: center;
+}
+#nav .form-two div{
+    float: left;
+}
+#nav img{
+    width:80px;
+    height: 80px;
+    border-radius: 12px;
+}
+
+
+#nav .form-two{
+    width: 480px;
+    height: 100px;
+    position: absolute;
+    left:50%;
+    margin-left: -240px;
+    top: 600px;
+
+}
+#nav .form-two div{
+    width:80px;
+    height:120px;
+    float: left;
+    margin-right: 120px;
+}
+#nav .form-two div:last-child{
+    margin-right:0;
+}
+.form-two p{
+    margin-bottom: 10px;
+}
+#nav .form-two a{
+    color: black;
+    margin-left: 0;
+    background: sandybrown;
+    font-size: 20px;
+    text-align: center;
+}
+#nav .form-two div{
+    float: left;
+}
+
+

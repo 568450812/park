@@ -1,0 +1,103 @@
+#box2{
+    width:1920px;
+    background: url("../images/regis3.jpg");
+    height: 850px;
+}
+
+form{
+    float: right;
+    margin-top: 280px;
+    margin-right: 350px;
+    width: 500px;
+    background-color: rgba(99, 99, 99, 0.3);
+    height: 400px;
+    color: black;
+}
+.form-one{
+    margin-bottom: 50px;
+}
+.form-one>div>p{
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+    font-size: 18px;
+    color: white;
+}
+.form-one>div a{
+    margin-top: 10px;
+    margin-right: 10px;
+    float: right;
+    text-decoration: none;
+    font-size: 20px;
+    color: darkcyan;
+}
+.form-line{
+    margin-bottom: 30px;
+}
+.form-line>p{
+    margin-left: 10px;
+    float: left;
+    width: 100px;
+    height: 40px;
+    text-align: right;
+    line-height: 40px;
+    color: aquamarine;
+    font-size: 18px;
+    font-family: Monospaced;
+
+}
+
+.uinput{
+    width: 330px;
+    height: 40px;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    padding-left: 10px;
+    font-size: 18px;
+    background: rgba(200,200,200,0.8);
+    margin-left: 10px;
+    color: black;
+
+}
+.form-line>div{
+    font-size: 16px;
+}
+.form-line>div>p{
+    margin-right: 46px;
+    margin-top: 4px;
+	float:right;
+    font-size: 16px;
+}
+.form-line>div>p a{
+	text-decoration:underline;
+    color: #999;
+}
+.form-line>div>input{
+	width:15px;
+	height:15px;
+	vertical-align:middle;
+}
+.form-line .btn{
+    box-sizing: border-box;
+    width: 300px;
+    height: 40px;
+    margin-left: 20px;
+    background: cadetblue;
+    color: white;
+    border: 1px solid ;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+}
+.form-last{
+    margin-top: 10px;
+}
+.form-last div>p{
+    float: left;
+    margin-left: 190px;
+    font-size: 13px;
+    color: antiquewhite;
+}
+.form-last div>a{
+    color: greenyellow;
+}
